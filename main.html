@@ -7,45 +7,53 @@
 </head>
 <body>
     <form method="post">
-        <!-- name-->
-        <lable for="name">Name</lable>
-        <input type="Test" id="name" placeholder="Name" required><br>
-        <!-- email-->
-        <lable for="email">Email</lable>
-        <input type="email" id="email" placeholder="Email" required ><br>
-        <!--gender-->
-        <lable for="gender_m">Male</lable>
-        <input type="radio" id="gender_m" name="gender" required >
-        <lable for="gender_f">Femail</lable>
-        <input type="radio" id="gender_f" name="gender" required><br>
-        <!--car brands-->
+        <!-- Name -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required><br>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <label for="gender_m">Male</label>
+        <input type="radio" id="gender_m" name="gender" value="male" required>
+        <label for="gender_f">Female</label>
+        <input type="radio" id="gender_f" name="gender" value="female" required><br>
+
+        <!-- Car Brands -->
         <label for="cars">Car Brands</label><br>
-        <select type="select" id="cars" placeholder="--Please choose an option--" required>
+        <select id="cars" name="cars"placeholder="--Please choose an option--" required>
+            <option value="" disabled selected>--Please choose an option--</option>
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="mercedes">Mercedes</option>
             <option value="audi">Audi</option>
         </select><br>
-        <!--age-->
-        <lable for="age">Age</lable>
-        <input type="Number" id="age" placeholder="Age" required><br>
-        <!--DOB-->
-        <lable for="dob">DOB</lable>
-        <input type="Date" id="dob" required ><br>
-        <!--phone number-->
-        <lable for="tel">Phone Number</lable>
-        <input type="Tel" id="tel" placeholder="xxx-xxx-xxxx" ><br><BR>
-        <!--password-->
-        <lable for="password">Password</lable>
-        <input type="Password" id="password" placeholder="Password" required ><br><BR>
-        <!--confirm password-->
 
-        <lable for="tos">I agree to the TOS</lable>
-        <input type="checkbox" id="tos" required><br>
+        <!-- Age -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Age" min="1" max="120" required><br>
+
+        <!-- DOB -->
+        <label for="dob">DOB</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <!-- Phone Number -->
+        <label for="tel">Phone Number</label>
+        <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: xxx-xxx-xxxx"><br>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+
+        <!-- Terms of Service -->
+        <label for="tos">I agree to the TOS</label>
+        <input type="checkbox" id="tos" name="tos" required><br>
+
+        <!-- Submit -->
         <button type="submit">Submit</button>
-
     </form>
-    
-
 </body>
 </html>
